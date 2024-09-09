@@ -1,5 +1,3 @@
-Aquí está la traducción en texto plano:
-
 ---
 
 # Image Exporter
