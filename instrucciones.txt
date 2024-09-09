@@ -1,0 +1,53 @@
+
+# Exportador de Imágenes
+
+Este script de Python redimensiona y convierte imágenes PNG a varios formatos y resoluciones. También convierte imágenes PNG a formato JPG con fondo blanco, manteniendo el DPI original cuando es posible.
+
+## Requisitos
+
+- Python 3.x
+- Librería Pillow (`PIL`)
+
+Puedes instalar Pillow usando el siguiente comando:
+```bash
+pip install pillow
+Instrucciones de Uso
+1. Preparar la Imagen
+Coloca la imagen PNG que deseas transformar en la carpeta llamada render.
+Asegúrate de que la imagen esté en formato PNG y tenga la extensión .png.
+2. Ejecutar el Script
+Guarda el script proporcionado en un archivo llamado exportador.py.
+Abre una línea de comandos o terminal.
+Navega al directorio donde se encuentra el archivo exportador.py.
+Ejecuta el script utilizando el siguiente comando:
+bash
+Copiar código
+python exportador.py
+3. Ubicación de Archivos
+El script buscará la imagen PNG en la carpeta render.
+Las imágenes transformadas se guardarán en una carpeta llamada salida, que se creará automáticamente si no existe.
+Descripción del Script
+El script realiza las siguientes operaciones:
+
+Carga de Imagen:
+
+Carga la imagen PNG desde la carpeta render.
+Redimensionamiento y Conversión a PNG:
+
+Crea versiones de la imagen en PNG con las siguientes resoluciones:
+2000x2000 píxeles
+400x400 píxeles
+800x400 píxeles
+Cada versión se guarda con un DPI de 72.
+Conversión a JPG:
+
+Crea una versión de la imagen con resolución original y DPI original en formato JPG.
+Crea versiones de la imagen en JPG con las siguientes resoluciones:
+2000x2000 píxeles
+400x400 píxeles
+800x400 píxeles
+Todas las versiones JPG tienen un fondo blanco y un DPI de 72.
+Nombres de Archivos:
+
+Los archivos de salida se nombran utilizando el nombre base del archivo original seguido del tamaño de la imagen y el formato. Por ejemplo:
+Para una imagen llamada prueba.png, se generarán archivos como prueba_2000px.png, prueba_400px.png, prueba_800px.png, prueba_original.jpg, etc.
