@@ -1,0 +1,68 @@
+Aquí está la traducción en texto plano:
+
+---
+
+# Image Exporter
+
+This Python script resizes and converts PNG images to various formats and resolutions. It also converts PNG images to JPG format with a white background, while maintaining the original DPI when possible.
+
+## Requirements
+
+- Python 3.x
+- Pillow library (`PIL`)
+
+You can install Pillow using the following command:
+```bash
+pip install pillow
+```
+
+## Usage Instructions
+
+1. Prepare the Image
+   Place the PNG image you want to transform in the folder named `render`.
+   Make sure the image is in PNG format and has the .png extension.
+
+2. Run the Script
+   Save the provided script in a file named `exportador.py`.
+   Open a command line or terminal.
+   Navigate to the directory where the `exportador.py` file is located.
+   Run the script using the following command:
+   ```bash
+   python exportador.py
+   ```
+
+3. File Locations
+   The script will look for the PNG image in the `render` folder.
+   The transformed images will be saved in a folder named `salida`, which will be created automatically if it does not exist.
+
+## Script Description
+
+The script performs the following operations:
+
+### Image Loading
+
+- Loads the PNG image from the `render` folder.
+
+### Resizing and PNG Conversion
+
+- Creates PNG versions of the image with the following resolutions:
+  - 2000x2000 pixels
+  - 400x400 pixels
+  - 800x400 pixels
+- Each version is saved with a DPI of 72.
+
+### JPG Conversion
+
+- Creates a version of the image with original resolution and original DPI in JPG format.
+- Creates JPG versions of the image with the following resolutions:
+  - 2000x2000 pixels
+  - 400x400 pixels
+  - 800x400 pixels
+- All JPG versions have a white background and a DPI of 72.
+
+### File Names
+
+- Output files are named using the base name of the original file followed by the image size and format. For example:
+  - For an image named `prueba.png`, files such as `prueba_2000px.png`, `prueba_400px.png`, `prueba_800px.png`, `prueba_original.jpg`, etc., will be generated.
+
+---
